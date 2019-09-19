@@ -1,12 +1,24 @@
 import React from 'react';
-import './style/PokeList.css'
+import PokeCell from './PokeCell';
+import { pokeClasses } from '../pokeClasses';
+import './style/PokeList.css';
 
-const PokeList = () => { 
+const PokeList = () => {
+  const cells = pokeClasses.map(pokeClass => {
     return (
-        <section className="poke-list">
+      <PokeCell 
+        key={pokeClass.id} 
+        pokeClass={pokeClass} 
+      />
+    );
+  });
 
-        </section>
-    )
+  return (
+    <section className="poke-list">
+      {cells}
+    </section>
+  )
 }
 
 export default PokeList;
+
