@@ -1,0 +1,3 @@
+[submodule "src/src/pokedex/blog"]
+	path = src/src/pokedex/blog
+	url = https://github.com/jdiejim/pokedex-blog.git
